@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTO NIVEL CAR SHOP | Detailing, Nanocerámica & Seguridad Automotriz en Pasto</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Orbitron for automotive racing feel + Plus Jakarta Sans for legibility -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="assets/tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body class="font-sans antialiased min-h-screen flex flex-col selection:bg-electric-500 selection:text-black">
+
+  <div class="bg-gradient-to-r from-obsidian-950 via-electric-600 to-obsidian-950 text-white text-xs font-semibold py-2 px-4 text-center border-b border-electric-500/30">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="top-location hover:text-neon-cyan transition-colors flex items-center gap-1.5">
+        <i class="fa-solid fa-location-dot text-neon-cyan animate-pulse"></i>
+        <span>Cra 33 NRO 8-06 Las Acacias (Frente a Movistar), Pasto</span>
+        <span class="bg-neon-cyan/20 text-neon-cyan text-[10px] px-1.5 py-0.5 rounded font-bold uppercase ml-1">Ver Mapa</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-4 text-slate-300">
+        <span><i class="fa-regular fa-clock text-neon-cyan mr-1"></i> Lunes a Sábado: 7:30am-1:30pm | 2:30pm-7:00pm</span>
+        <a href="https://wa.me/573014570751" target="_blank" class="hover:text-green-400 font-bold flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-green-400"></i> +57 301 457 0751
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div id="site-header-inner" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 relative">
+      
+      <!-- Logo oficial incluido localmente para GitHub Pages -->
+      <a href="#inicio" class="brand-lockup flex items-center shrink-0" aria-label="ALTO NIVEL CAR SHOP - Inicio">
+        <img src="./assets/images/logo-alto-nivel.png" alt="ALTO NIVEL CAR SHOP" class="brand-logo object-contain" width="164" height="68" loading="eager">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-7 font-medium text-sm text-slate-300">
+        <a href="#inicio" class="hover:text-electric-500 transition-colors">Inicio</a>
+        <a href="#servicios" class="hover:text-electric-500 transition-colors">Servicios</a>
+        <a href="#agendar" class="hover:text-electric-500 transition-colors">Agendar Cita</a>
+        <a href="#carrusel-trabajos" class="hover:text-electric-500 transition-colors">Trabajos y Reseñas</a>
+        <a href="#ubicacion" class="hover:text-electric-500 transition-colors">Ubicación</a>
+      </nav>
+
+      <button id="mobile-menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false" class="mobile-menu-toggle xl:hidden w-11 h-11 rounded-xl border border-electric-500/40 text-neon-cyan hover:bg-electric-500/15 transition-colors flex items-center justify-center shrink-0">
+        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+      </button>
+
+      <nav id="mobile-menu" aria-label="Navegación móvil" class="xl:hidden text-sm font-semibold text-slate-200 z-50">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#agendar">Agendar cita</a>
+        <a href="#carrusel-trabajos">Trabajos y reseñas</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
+      <!-- CTA Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-neon-cyan border border-electric-500/40 text-xs font-bold transition-all items-center gap-1.5">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Cómo Llegar</span>
+        </a>
+
+        <a href="#agendar" aria-label="Agendar cita" class="header-booking px-5 py-2.5 rounded-xl bg-gradient-to-r from-electric-600 to-electric-500 hover:from-electric-500 hover:to-neon-cyan text-slate-950 font-extrabold text-xs uppercase tracking-wider shadow-neon-blue transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check text-sm"></i>
+          <span>Agendar Cita</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" class="relative py-16 lg:py-24 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-electric-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-neon-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Information -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="hero-eyebrow inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border-electric-500/40 text-electric-400 text-xs font-extrabold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-neon-cyan animate-ping"></span>
+            <span>Taller Líder en Estética Automotriz en Pasto</span>
+          </div>
+
+          <h1 class="hero-title font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+            Lleva tu vehículo al <br>
+            <span class="bg-gradient-to-r from-electric-400 via-neon-cyan to-electric-500 bg-clip-text text-transparent neon-text-glow">Siguiente Nivel</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed font-light">
+            Especialistas en películas nanocerámicas, polarizados de seguridad, PPF, desabollado PDR, sonido y detailing. Cuidado premium sin tecnicismos difíciles.
+          </p>
+
+          <div class="hero-actions flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#agendar" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-electric-500 via-electric-600 to-neon-cyan text-slate-950 font-black text-xs uppercase tracking-wider shadow-neon-cyan hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-calendar-days text-base"></i>
+              <span>Agendar mi Cita Online</span>
+            </a>
+            
+            <a href="https://wa.me/573014570751?text=Hola%20ALTO%20NIVEL%20CAR%20SHOP,%20deseo%20más%20información%20sobre%20sus%20servicios" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl glass-card text-white hover:border-electric-500 font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-green-400 text-base"></i>
+              <span>Consulta por WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics Counter Section -->
+          <div class="stats-grid pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800 text-center lg:text-left">
+            <div>
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-electric-400 block">+10,000</span>
+              <span class="text-xs text-slate-400">Clientes Satisfechos</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-neon-cyan block">+20 Años</span>
+              <span class="text-xs text-slate-400">De Experiencia</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-electric-400 block">100%</span>
+              <span class="text-xs text-slate-400">Garantía Escrita</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-neon-cyan block">9</span>
+              <span class="text-xs text-slate-400">Servicios Especiales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-card p-4 rounded-3xl border-2 border-electric-500/30 relative group shadow-2xl">
+            <div class="hero-media relative h-[380px] rounded-2xl overflow-hidden bg-obsidian-950">
+              <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800" alt="Detailing de Auto ALTO NIVEL CAR SHOP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-xl border border-electric-500/40">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] text-neon-cyan font-bold uppercase tracking-wider block">Localización</span>
+                    <span class="font-display font-bold text-sm text-white">Las Acacias, Pasto</span>
+                  </div>
+                  <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="bg-electric-500 hover:bg-neon-cyan text-slate-950 font-black text-xs px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-diamond-turn-right"></i> Ir con GPS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="py-20 bg-obsidian-850/60 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold text-neon-cyan uppercase tracking-widest block">Catálogo de Servicios Automotrices</span>
+        <h2 class="section-heading font-display font-bold text-3xl sm:text-4xl text-white">Nuestras 9 Especialidades de Alto Nivel</h2>
+        <p class="text-slate-400 text-sm">Presentación clara y comprensible para cuidar la estética, seguridad y comodidad de tu carro en San Juan de Pasto.</p>
+      </div>
+
+      <!-- 9 Services Grid -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Dynamically populated via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <section id="carrusel-trabajos" class="py-20 bg-obsidian-950 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-xs font-bold text-neon-cyan uppercase tracking-widest block">Galería de Trabajos & Opiniones</span>
+        <h2 class="section-heading font-display font-bold text-3xl text-white">Clientes Satisfechos en Toda Colombia</h2>
+        <p class="text-slate-400 text-sm">Conductores de Pasto y visitantes de Bogotá, Cali, Ipiales, Popayán y Túquerres confían en ALTO NIVEL.</p>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="relative -mx-4 sm:mx-0">
+        <div id="carousel-track" class="overflow-hidden rounded-3xl glass-card border border-electric-500/30">
+          <!-- Reseñas renderizadas como una cinta continua -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="agendar" class="py-20 bg-obsidian-850/40 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="form-card glass-card p-6 sm:p-10 rounded-3xl border border-electric-500/40 relative overflow-hidden shadow-glow-card">
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <span class="text-xs font-bold text-neon-cyan uppercase tracking-widest block">Agendamiento Inmediato</span>
+          <h2 class="section-heading font-display font-bold text-3xl text-white">Reserva tu Cita Online</h2>
+          <p class="text-slate-400 text-xs sm:text-sm">
+            Selecciona tu horario en las jornadas disponibles (7:30am - 1:30pm o 2:30pm - 7:00pm). La reserva se enviará directamente a nuestro WhatsApp oficial.
+          </p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Service Selection -->
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">1. Servicio Requerido <span class="text-electric-500">*</span></label>
+              <select id="booking-service" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+                <option value="" disabled selected>Elige un servicio...</option>
+                <option value="Polarizado Tradicional">Polarizado Tradicional ($120.000 COP aprox)</option>
+                <option value="Película de Seguridad">Película de Seguridad Anti-Impacto ($220.000 COP aprox)</option>
+                <option value="Película Nanocerámica">Película Nanocerámica Térmica ($380.000 COP aprox)</option>
+                <option value="Instalación de Sonido">Instalación de Sonido & Pantallas (Desde $150.000 COP)</option>
+                <option value="Cámaras de Seguridad">Cámaras de Seguridad / Dashcams ($180.000 COP aprox)</option>
+                <option value="Sensores y Reversa">Sensores y Cámara de Reversa ($160.000 COP aprox)</option>
+                <option value="Desabollado PDR">Desabollado sin Pintura PDR ($140.000 COP aprox)</option>
+                <option value="Protección PPF">Protección de Pintura PPF (Desde $450.000 COP)</option>
+                <option value="Detailing y Estética">Detailing & Estética Automotriz ($250.000 COP aprox)</option>
+              </select>
+            </div>
+
+            <!-- Date Picker -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">2. Fecha deseada <span class="text-electric-500">*</span></label>
+              <input type="date" id="booking-date" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+            </div>
+
+            <!-- Time Slots matching split operating hours -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">3. Horario (Jornada Mañana / Tarde) <span class="text-electric-500">*</span></label>
+              <select id="booking-time" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+                <option value="" disabled selected>Selecciona una hora...</option>
+                <optgroup label="Jornada Mañana (7:30 am - 1:30 pm)">
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:30 AM">09:30 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                </optgroup>
+                <optgroup label="Jornada Tarde (2:30 pm - 7:00 pm)">
+                  <option value="02:30 PM">02:30 PM</option>
+                  <option value="03:30 PM">03:30 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <!-- Customer Full Name -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">4. Nombre Completo <span class="text-electric-500">*</span></label>
+              <input type="text" id="booking-name" required placeholder="Ej. Juan Carlos Rosero" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+            </div>
+
+            <!-- WhatsApp Phone Number -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">5. Teléfono WhatsApp <span class="text-electric-500">*</span></label>
+              <input type="tel" id="booking-phone" required placeholder="Ej. 301 457 0751" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+            </div>
+
+            <!-- Vehicle Model & Plate -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">6. Vehículo (Marca / Modelo / Placa) <span class="text-electric-500">*</span></label>
+              <input type="text" id="booking-car" required placeholder="Ej. Toyota Hilux 2023 - HXZ 123" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+            </div>
+
+            <!-- Additional Notes -->
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">7. Observaciones Adicionales</label>
+              <input type="text" id="booking-notes" placeholder="Ej. Película de nanocerámica oscura atrás y clara adelante" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3.5 text-slate-200 text-sm focus:outline-none focus:border-electric-500 transition-colors">
+            </div>
+
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4 text-center">
+            <button type="submit" class="form-submit w-full sm:w-auto px-10 py-4 rounded-2xl bg-gradient-to-r from-electric-500 via-electric-600 to-neon-cyan text-slate-950 font-black text-xs uppercase tracking-wider shadow-neon-blue hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Enviar Reserva a WhatsApp (+57 301 457 0751)</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="ubicacion" class="py-20 bg-obsidian-950 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Address & Details Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 text-neon-cyan border border-electric-500/30 text-xs font-bold uppercase">
+            <i class="fa-solid fa-map-pin"></i> Sede Principal Pasto
+          </div>
+
+          <h2 class="section-heading font-display font-bold text-3xl text-white">¿Dónde Estamos Ubicados?</h2>
+
+          <div class="space-y-4 text-sm text-slate-300">
+            <div class="flex items-start gap-3 glass-card p-4 rounded-2xl">
+              <i class="fa-solid fa-location-dot text-neon-cyan text-xl mt-1"></i>
+              <div>
+                <strong class="text-white block font-bold">Dirección Comercial:</strong>
+                <span>Cra 33 NRO 8-06 Las Acacias (Frente a Movistar), San Juan de Pasto, Nariño</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 glass-card p-4 rounded-2xl">
+              <i class="fa-regular fa-clock text-electric-400 text-xl mt-1"></i>
+              <div>
+                <strong class="text-white block font-bold">Horarios de Atención (Lunes a Sábado):</strong>
+                <span class="block">• Jornada Mañana: 7:30 am – 1:30 pm</span>
+                <span class="block">• Jornada Tarde: 2:30 pm – 7:00 pm</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 glass-card p-4 rounded-2xl">
+              <i class="fa-brands fa-whatsapp text-green-400 text-xl mt-1"></i>
+              <div>
+                <strong class="text-white block font-bold">Teléfono & WhatsApp Directo:</strong>
+                <a href="https://wa.me/573014570751" target="_blank" class="text-electric-400 hover:text-white font-mono font-bold">+57 301 457 0751</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="w-full py-4 rounded-2xl bg-gradient-to-r from-electric-600 to-electric-500 hover:from-electric-500 hover:to-neon-cyan text-slate-950 font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-neon-blue">
+            <i class="fa-solid fa-diamond-turn-right text-base"></i>
+            <span>Abrir Ubicación en Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Google Maps Embed Representation -->
+        <div class="lg:col-span-7">
+          <div class="glass-card p-3 rounded-3xl border border-electric-500/30 overflow-hidden shadow-2xl relative group">
+            <div class="map-media relative h-[380px] rounded-2xl overflow-hidden bg-obsidian-850">
+              <!-- Vista de mapa integrada; el botón abre la ubicación exacta solicitada. -->
+              <iframe 
+                title="Ubicación ALTO NIVEL CAR SHOP Pasto"
+                src="https://www.google.com/maps?q=Cra+33+NRO+8-06+Las+Acacias,+Pasto,+Nari%C3%B1o,+Colombia&z=16&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(120%);" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+
+              <div class="map-overlay absolute bottom-4 left-4 right-4 glass-card p-4 rounded-xl flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-white font-bold block">ALTO NIVEL CAR SHOP</span>
+                  <span class="text-[11px] text-slate-400">Cra 33 NRO 8-06 Las Acacias</span>
+                </div>
+                <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-lg bg-neon-cyan text-slate-950 font-black text-xs flex items-center gap-1.5 hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-location-arrow"></i> Navegar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contacto" class="bg-obsidian-950 border-t border-slate-800 text-slate-400 py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
+      
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="font-display font-black text-lg text-white">ALTO<span class="text-electric-500">NIVEL</span></span>
+        </div>
+        <p class="leading-relaxed text-slate-400">
+          Líderes en estética, seguridad y tecnología automotriz. +10,000 clientes satisfechos y +20 años de experiencia acumulada en Pasto.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white uppercase tracking-wider mb-3">Ubicación y Maps</h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://maps.app.goo.gl/q45QaLa7DXpGCqvW8" target="_blank" rel="noopener" class="hover:text-neon-cyan transition-colors">
+              <i class="fa-solid fa-location-dot text-electric-400 mr-2"></i> Cra 33 NRO 8-06 Las Acacias (Frente a Movistar)
+            </a>
+          </li>
+          <li><i class="fa-solid fa-phone text-electric-400 mr-2"></i> +57 301 457 0751</li>
+          <li><i class="fa-brands fa-whatsapp text-green-400 mr-2"></i> WhatsApp: +57 301 457 0751</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white uppercase tracking-wider mb-3">Jornadas de Atención</h4>
+        <ul class="space-y-1.5">
+          <li><strong>Lunes a Sábado:</strong></li>
+          <li>• Mañana: 7:30 am – 1:30 pm</li>
+          <li>• Tarde: 2:30 pm – 7:00 pm</li>
+          <li class="text-slate-500 pt-1">Domingos y Festivos con cita previa</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white uppercase tracking-wider mb-3">Atención personalizada</h4>
+        <p>Agenda tu cita por WhatsApp o mediante el formulario y te confirmaremos la disponibilidad.</p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-slate-900 text-center text-xs text-slate-600">
+      © 2026 ALTO NIVEL CAR SHOP. Todos los derechos reservados. San Juan de Pasto, Nariño, Colombia<button id="admin-dot-trigger" type="button" class="admin-dot-trigger" aria-label="Abrir administración">.</button>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/573014570751?text=Hola%20ALTO%20NIVEL%20,%20deseo%20consultar%20sobre%20un%20servicio" target="_blank" aria-label="Consultar por WhatsApp" class="floating-whatsapp fixed bottom-6 right-6 z-40 p-4 rounded-full bg-green-500 hover:bg-green-400 text-slate-950 font-bold shadow-neon-blue transition-transform duration-300 hover:scale-110 flex items-center justify-center">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+  <div id="admin-login-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-obsidian-950/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 sm:p-8 border border-electric-500/40 relative text-white">
+      <button onclick="closeAdminLoginModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="text-center space-y-2 mb-6">
+        <div class="w-12 h-12 bg-electric-500/20 text-electric-400 rounded-2xl flex items-center justify-center mx-auto text-xl">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl">Panel de Administración</h3>
+        <p class="text-xs text-slate-400">Ingresa la contraseña para acceder a la gestión de citas.</p>
+      </div>
+
+      <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Contraseña Administrador</label>
+        <input type="password" id="admin-pass-input" required placeholder="Ingresa la contraseña" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electric-500">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-electric-600 to-electric-500 hover:from-electric-500 hover:to-neon-cyan text-slate-950 font-black text-xs uppercase tracking-wider transition-all">
+          Ingresar al Sistema
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="admin-dashboard-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-obsidian-950/95 backdrop-blur-xl p-4 sm:p-8">
+    <div class="max-w-7xl mx-auto space-y-6">
+      
+      <!-- Top Management Bar -->
+      <div class="glass-card p-6 rounded-3xl border border-electric-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="admin-actions flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-electric-500/20 text-electric-400 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-xl text-white">Administración de Citas</h2>
+            <p class="text-xs text-slate-400">ALTO NIVEL CAR SHOP • Sede Pasto</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="openManualBookingModal()" class="px-4 py-2.5 rounded-xl bg-electric-600 hover:bg-electric-500 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+            <i class="fa-solid fa-plus"></i> Crear Cita Manual
+          </button>
+          <button onclick="closeAdminDashboard()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-all">
+            <i class="fa-solid fa-right-from-bracket mr-1"></i> Cerrar
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card p-5 rounded-2xl border border-slate-800">
+          <span class="text-xs font-bold text-slate-400 uppercase block mb-1">Citas Totales</span>
+          <span id="kpi-total" class="font-display font-extrabold text-3xl text-white">0</span>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl border border-amber-500/30">
+          <span class="text-xs font-bold text-amber-400 uppercase block mb-1">Pendientes</span>
+          <span id="kpi-pending" class="font-display font-extrabold text-3xl text-amber-400">0</span>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl border border-green-500/30">
+          <span class="text-xs font-bold text-green-400 uppercase block mb-1">Confirmadas</span>
+          <span id="kpi-confirmed" class="font-display font-extrabold text-3xl text-green-400">0</span>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl border border-electric-500/30">
+          <span class="text-xs font-bold text-electric-400 uppercase block mb-1">Ingresos Est.</span>
+          <span id="kpi-revenue" class="font-display font-extrabold text-2xl text-neon-cyan">$ 0</span>
+        </div>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="glass-card p-4 rounded-2xl border border-slate-800 flex flex-col md:flex-row gap-4 justify-between items-center text-xs">
+        <div class="relative w-full md:w-80">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500"></i>
+          <input type="text" id="admin-search" oninput="renderAdminTable()" placeholder="Buscar cliente, carro o teléfono..." class="w-full bg-obsidian-950 border border-slate-700 rounded-xl pl-9 pr-4 py-2.5 text-slate-200 focus:outline-none focus:border-electric-500">
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto">
+          <button onclick="filterAdminTable('Todas', this)" class="admin-filter-btn active px-3.5 py-2 rounded-xl bg-electric-500 text-slate-950 font-bold transition-all">Todas</button>
+          <button onclick="filterAdminTable('Pendiente', this)" class="admin-filter-btn px-3.5 py-2 rounded-xl bg-obsidian-950 text-slate-400 hover:text-white transition-all">Pendientes</button>
+          <button onclick="filterAdminTable('Confirmada', this)" class="admin-filter-btn px-3.5 py-2 rounded-xl bg-obsidian-950 text-slate-400 hover:text-white transition-all">Confirmadas</button>
+          <button onclick="filterAdminTable('Completada', this)" class="admin-filter-btn px-3.5 py-2 rounded-xl bg-obsidian-950 text-slate-400 hover:text-white transition-all">Completadas</button>
+          <button onclick="filterAdminTable('Cancelada', this)" class="admin-filter-btn px-3.5 py-2 rounded-xl bg-obsidian-950 text-slate-400 hover:text-white transition-all">Canceladas</button>
+        </div>
+      </div>
+
+      <!-- Admin Table -->
+      <div class="glass-card rounded-3xl border border-slate-800 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-obsidian-950 text-slate-400 font-bold uppercase tracking-wider border-b border-slate-800">
+              <tr>
+                <th class="p-4">Cliente</th>
+                <th class="p-4">Vehículo</th>
+                <th class="p-4">Servicio</th>
+                <th class="p-4">Fecha / Hora</th>
+                <th class="p-4">Estado</th>
+                <th class="p-4 text-right">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="admin-appointments-tbody" class="divide-y divide-slate-800/60">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Manual Booking Modal (Admin) -->
+  <div id="manual-booking-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-obsidian-950/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-lg w-full p-6 border border-electric-500/40 relative text-white">
+      <button onclick="closeManualBookingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <h3 class="font-display font-bold text-lg mb-4">Agregar Cita Manualmente</h3>
+      
+      <form onsubmit="handleManualBookingSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-300 uppercase mb-1">Cliente</label>
+          <input type="text" id="manual-name" required placeholder="Nombre completo" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-300 uppercase mb-1">Teléfono</label>
+          <input type="tel" id="manual-phone" required placeholder="3014570751" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-300 uppercase mb-1">Vehículo / Placa</label>
+          <input type="text" id="manual-car" required placeholder="Marca / Modelo" class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-300 uppercase mb-1">Servicio Requerido</label>
+          <select id="manual-service" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+            <option value="Polarizado Tradicional">Polarizado Tradicional</option>
+            <option value="Película de Seguridad">Película de Seguridad</option>
+            <option value="Película Nanocerámica">Película Nanocerámica</option>
+            <option value="Instalación de Sonido">Instalación de Sonido</option>
+            <option value="Cámaras de Seguridad">Cámaras de Seguridad</option>
+            <option value="Sensores y Reversa">Sensores y Reversa</option>
+            <option value="Desabollado PDR">Desabollado PDR</option>
+            <option value="Protección PPF">Protección PPF</option>
+            <option value="Detailing y Estética">Detailing y Estética</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-300 uppercase mb-1">Fecha</label>
+            <input type="date" id="manual-date" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-300 uppercase mb-1">Hora</label>
+            <select id="manual-time" required class="w-full bg-obsidian-950 border border-slate-700 rounded-xl p-3 text-white">
+              <option value="08:00 AM">08:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="02:30 PM">02:30 PM</option>
+              <option value="05:00 PM">05:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-electric-500 hover:bg-electric-400 text-slate-950 font-black uppercase transition-all">
+          Guardar Cita en Sistema
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-container" class="fixed bottom-6 left-6 z-50 space-y-2 pointer-events-none"></div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
